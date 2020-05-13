@@ -25,6 +25,14 @@
 		<url>https://github.com/mindcomputing/knowledge-doc</url>
 		<connection>scm:git:https://github.com/mindcomputing/knowledge-doc.git</connection>
 	</scm>
+	
+	<distributionManagement>
+		<snapshotRepository>
+			<id>github</id>
+			<name>GitHub mindcomputing Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/mindcomputing/knowledge-doc</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
