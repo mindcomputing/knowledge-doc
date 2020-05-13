@@ -1,6 +1,6 @@
 # This is for GitHub CI
 
-name: Java CI with Maven
+name: Test build Documentation
 
 on:
   push:
