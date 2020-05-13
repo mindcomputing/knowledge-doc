@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">
+    <title>Navigation Bar</title>
+<section xml:id="navigation-bar-description"><title>Navigation Bar</title>
+    <para>The Editor allows the ability to modify content, create content, view content, create
+            versions, and export content. One of the areas to access these functions is in the
+                <emphasis>Navigation Bar</emphasis>. </para>
+    <para><figure xml:id="navigation-bar">
+        <title>Navigation Bar</title>
+        <mediaobject>
+            <alt>Figure of the Knowledge Editor navigation displaying the Editor logo, and
+                menu options for Projects, Export Management, Authoring, Manager, and User
+                name Admin</alt>
+            <imageobject>
+                <imagedata align="left" scalefit="1" width="40%" contentdepth="40%"
+                    fileref="images/nav-editor-layout2.png"/>
+            </imageobject>
+        </mediaobject>
+    </figure></para>
+    <para>The Navigation Bar provides the following options:<itemizedlist>
+                <listitem>
+                    <para>Projects - If your account has more than one project assigned, switch
+                        between them by selecting this menu item.</para>
+                </listitem>
+                <listitem>
+                    <para>Shortcuts - Used for multiple actions that can be found in tab-specific
+                        areas of the application.</para>
+                </listitem>
+                <listitem>
+                    <para>Manager - This option displays for Content Managers, and Administrators
+                        and takes the user to the Knowledge Manager Homepage. This option is not
+                        visible to Read-Only and Edit-Only users.</para>
+                </listitem>
+                <listitem>
+                    <para>User - The menu under the user's name provides the ability to update
+                        global settings, manage account, find application help, and to log
+                        out.</para>
+                </listitem>
+            </itemizedlist></para>
+    <section><title>Projects</title>
+       <para>The <emphasis>Projects Menu</emphasis> displays all of the projects that a user is
+                assigned to. The user can switch between projects with this menu option as long as
+                there is more than one project assigned, and the Knowledge environment they are
+                working in has more than one project defined. The default is to have one project per
+                Knowledge instance.</para></section>
+    <section>
+            <title>Shortcuts</title>
+            <para>The <emphasis>Shortcuts</emphasis> sub-menu provides a quick way for the user to
+                access certain actions including: <itemizedlist>
+                    <listitem>
+                        <para>Create a version – displays the create a version modal. This option is
+                            only visible to users with content manager permissions and above.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Export content – displays the export content modal.</para>
+                    </listitem>
+                    <listitem>
+                        <para>New concept – to create a new concept.</para>
+                    </listitem>
+                    <listitem>
+                        <para>New map set – to create a new map set.</para>
+                    </listitem>
+                    <listitem>
+                        <para>New value set – to create a new value set.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Run classifier – performs a classification run.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Run QA test – performs a quality assurance check. </para>
+                    </listitem>
+                </itemizedlist>
+                <figure xml:id="shortcuts">
+                    <title>Shortcuts Menu</title>
+                    <mediaobject>
+                        <alt/>
+                        <imageobject>
+                            <imagedata align="left" fileref="images/shortcuts-menu2.png"/>
+                        </imageobject>
+                    </mediaobject>
+                </figure>All of these actions can be performed by going through the shortcut menu or
+                through features within specific tabs <emphasis>Task Pane</emphasis>, refer to <xref
+                    linkend="editor-functions"/>.</para>
+        </section>
+            
+    <section>
+            <title>Manager</title>
+            <para>The Manager option is only available to an Administrator or System Manager
+                administrator. When selected, the user will be taken to the Knowledge Manager area.
+                Here, a user with the appropriate permissions can modify user accounts, create new
+                accounts, etc. For more details refer to <xref linkend="user-management-section"/>
+            </para>
+        </section>
+    
+    <section><title>Username Menu</title>
+        <para>The menu under the user's name provides the ability to modify global settings, manage
+                your account, view the user guide, request technical support, and log out of the
+                application, <xref linkend="user-menu"/>.<itemizedlist>
+                    <listitem>
+                        <para>Global Display Settings – contains filters and customizations for what is
+                            displayed throughout the user interface.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Manage Account – enables a user to modify their user profile.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Help – user documentation for Knowledge.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Contact Technical Support – send a technical support request.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Logout – signs you out of Knowledge.</para>
+                    </listitem></itemizedlist>
+          </para>
+          <para><figure xml:id="user-menu">
+            <title>User Menu</title>
+            <mediaobject>
+                <alt></alt>
+                <imageobject>
+                    <imagedata align="left" 
+                        fileref="images/user-menu-options.png"/>
+                </imageobject>
+            </mediaobject>
+        </figure></para>
+        
+        <section><title>Global Display Settings</title>
+            <para>When a user is created, the display options are configured with default settings.
+                    A user can modify the display settings using the <emphasis>Global Display
+                        Settings</emphasis>
+                    <footnote>
+                        <para>The following options in the Global Display Settings panel are not
+                            fully implemented and will not be documented here: Module Flags, Path
+                            Flags, Value Set Flag. It is recommended that users <emphasis
+                                role="strong">ONLY</emphasis> modify settings that are documented in
+                            this section.</para>
+                    </footnote> panel. Changes to the display settings in the <emphasis>Global
+                        Display Settings</emphasis> panel affects the displayed information in both
+                    the <emphasis>Task Pane</emphasis> and the <emphasis>Concept Viewer
+                        Pane</emphasis>, refer to <xref linkend="editor-functions"/>. However, the
+                        <emphasis>Concept Viewer Pane</emphasis> and the <emphasis>Task
+                        Pane</emphasis> can override the <emphasis>Global Display
+                        Settings</emphasis> using the <emphasis>Display Options</emphasis> located
+                    in the top right hand corner of each pane. The configurable options in
+                        <emphasis>Global Display Settings</emphasis> are: <itemizedlist>
+                        <listitem>
+                            <para>General Options – a user can change the order in which the
+                                descriptions are displayed in the taxonomy view and the number of
+                                concepts displayed in the taxonomy.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Display Options – a user can configure the properties displayed,
+                                stated or inferred views of the taxonomy, and modules.</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            <section xml:id="general-display-options" ><title>General Options</title>
+                <para>In the default configuration, FQN is the preferred description to display in
+                        the taxonomy. The taxonomy will display 250 child concepts per concept
+                        (additional concepts are available through pagination) and the default
+                        language is set to English. See  <xref linkend="general-display-options"/>
+                        outlined in red.</para>
+                <para><figure>
+                    <title>General Display Options</title>
+                    <mediaobject>
+                                <alt/>
+                                <imageobject>
+                                    <imagedata align="left" scalefit="1" width="75%"
+                                        contentdepth="75%"
+                                        fileref="images/general-global-display-options.png"/>
+                                </imageobject>
+                            </mediaobject>
+                </figure></para></section>
+             
+            <section xml:id="display-options-section"><title>Display Options</title>
+                <para>Similar to <emphasis>General Options</emphasis>, the<emphasis> Display
+                            Options</emphasis> are set to default settings when a user's account is
+                        created (see <xref linkend="display-options"/> areas circled in red). These
+                        options mostly effect the views in the <emphasis>Concept Viewer</emphasis>
+                        and the <emphasis>Taxonomy</emphasis>.</para>
+                <para><figure xml:id="display-options">
+                    <title>General Display Options</title>
+                     <mediaobject>
+                         <alt></alt>
+                         <imageobject>
+                             <imagedata align="left" scalefit="1" width="75%" contentdepth="75%"
+                                 fileref="images/global-display-options.png"/>
+                         </imageobject>
+                      </mediaobject></figure> </para>
+                <example><title>Display Inactive Descriptions</title>
+                <para>To show inactive descriptions in the <emphasis>Concept Viewer</emphasis> and
+                                <emphasis>Taxonomy</emphasis>, <emphasis role="bold"
+                                >deselect</emphasis> the <emphasis>Show Only Active
+                                Concepts</emphasis> checkbox, and select <emphasis>Apply
+                                changes</emphasis>. Inactive descriptions are italicized in the application.<mediaobject>
+                                <alt/>
+                                <imageobject>
+                                    <imagedata align="left" scalefit="1" width="75%"
+                                        contentdepth="75%"
+                                        fileref="images/inactive-concepts-descriptions-displayed.png"
+                                    />
+                                </imageobject>
+                            </mediaobject>
+                        </para></example>
+            </section>
+        </section>
+         <section><title>Manage Account</title>
+            <para>A user can modify their account profile by selecting <emphasis>Manage
+                        Account</emphasis>. From there, the <emphasis>Edit Profile</emphasis> is
+                    presented, see <xref linkend="user-edit-profile"/>. A user can modify their
+                    email address, User Name, Display Name, and password. To save changes to your
+                    profile, select the <emphasis>Save</emphasis> button. To return to the Knowledge
+                    Editor, select your user menu at the top right, select
+                    <emphasis>Home</emphasis>, then select <emphasis>Editor</emphasis> button. <note>
+                        <para>The <emphasis>System Token</emphasis> is needed only by
+                                <emphasis>Software Developers</emphasis>.</para>
+                    </note>
+                </para>
+             <para><figure xml:id="user-edit-profile">
+                 <title>Edit Profile</title>
+                 <mediaobject>
+                     <alt></alt>
+                     <imageobject>
+                         <imagedata align="left" scalefit="1" width="75%" contentdepth="75%"
+                             fileref="images/user-edit-profile.png"/>
+                     </imageobject>
+                 </mediaobject>
+             </figure></para>
+         </section>
+         <section><title>Help</title>
+             <para>Selecting <emphasis>Help</emphasis> will open the <emphasis>User
+                        Documentation</emphasis> for Knowledge. </para></section>
+         <section><title>Contact Technical Support</title>
+            <para>Selecting <emphasis>Contact Technical Support</emphasis> will bring the user to a
+                    web-page where they can send their question and describe their issue to our
+                    technical support team, <xref linkend="tech-support"/>. An email response will
+                    be sent to the user as soon as possible.</para>
+             <para><figure xml:id="tech-support">
+                 <title>Contact Technical Support</title>
+                 <mediaobject>
+                     <alt></alt>
+                     <imageobject>
+                         <imagedata align="left" scalefit="1" width="75%" contentdepth="75%"
+                             fileref="images/tech-support.png"/>
+                     </imageobject>
+                 </mediaobject>
+             </figure></para>
+         </section>
+    </section>
+    </section>  
+        
+</chapter>

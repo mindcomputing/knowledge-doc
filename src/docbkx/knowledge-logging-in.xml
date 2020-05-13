@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="5.1">
+    <title>Logging In to Knowledge</title>
+    <para>When the administrator creates an account for you, you will receive an email, which will
+        contain login information (be sure to check your spam folder). If you do not receive an
+        email with your account and login information, please contact your Knowledge Administrator. </para>
+    <section>
+        <title>User Roles</title>
+        <para>A user is given at least one role and can also have more than one role in Knowledge.
+            There are six roles in Knowledge: <itemizedlist>
+                <listitem>
+                    <para>Read : users with this role can view content</para>
+                </listitem>
+                <listitem>
+                    <para>Editor: user's can modify content, create new content, search, classify,
+                        and export content</para>
+                </listitem>
+                <listitem>
+                    <para>Content Manager: the Content Manager has all the capabilities of the
+                        Editor role, export content, and can release content</para>
+                </listitem>
+                <listitem>
+                    <para>System Manager: the System Manager can has administrative privileges to
+                        manage users and their roles</para>
+                </listitem>
+                <listitem>
+                    <para>Administrator: administrators can create user accounts, modify user
+                        accounts, edit content, create content, export content and release
+                        content</para>
+                </listitem>
+                <listitem>
+                    <para>Automated: This is a role used for system to system communication</para>
+                </listitem>
+            </itemizedlist></para>
+    </section>
+    <section>
+        <title>Login</title>
+        <para>To login, enter your username (is not case sensitive) and password (is case
+            sensitive). If <emphasis>Remember My Username</emphasis> is selected your username will
+            be remembered the next time you login. If you forget your username or password select
+            the appropriate link on the Knowledge Login screen and an email will be sent to you with
+            your username or a link to reset your password. <figure>
+                <title>Login</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata align="left" scalefit="1" width="50%" contentdepth="50%"
+                            fileref="images/login-page.png"/>
+                    </imageobject>
+                    <textobject>
+                        <phrase>Login Page</phrase>
+                    </textobject>
+                </mediaobject>
+            </figure>You have the options to log into Knowledge using a Google account or Microsoft
+            365 account as well. The account must be associated with the main login in order to work
+            properly (visit your Profile Settings to update the e-mail address). If there is no
+            account linked to the Google or Microsoft e-mail that is used, Knowledge will
+            automatically create a new account and notify the administrator.</para>
+        <para>If you have difficulty logging in, selecting the "Can't log in?" link to reset your
+            password. The system will lock the account after 5 failed attempts. At this point,
+            contact the application administrator in order to unlock your account.</para>
+        <simplesect>
+            <title>Knowledge Homepage</title>
+            <para>When you login into Knowledge you will see the Knowledge Manager Homepage as shown
+                in <xref linkend="author-login"/>. </para>
+            <para>From this page you can: <itemizedlist>
+                    <listitem>
+                        <para>select the <emphasis>Profile</emphasis> menu option to change your
+                            profile information</para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis>add</emphasis> a user or <emphasis>modify</emphasis> a
+                            user's role if you are an Administrator</para>
+                    </listitem>
+                    <listitem>
+                        <para>select the <emphasis>Go To Editor</emphasis> button to go to the
+                            Knowledge Editor</para>
+                    </listitem>
+                    <listitem>
+                        <para>select the <emphasis>Go To API</emphasis> button to view the Rest API
+                            documentation</para>
+                    </listitem>
+                    <listitem>
+                        <para>select the <emphasis>Go To Auth API </emphasis>button to view the
+                            Authentication API documentaiton</para>
+                    </listitem>
+                    <listitem>
+                        <para>select the <emphasis>Logout</emphasis> button to logout of the
+                            application</para>
+                    </listitem>
+                </itemizedlist></para>
+            <para>
+                <figure xml:id="author-login">
+                    <title>Knowledge Homepage</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata align="left" scalefit="1" width="50%" contentdepth="50%"
+                                fileref="images/knowledge-manager.png"/>
+                        </imageobject>
+                        <textobject>
+                            <phrase>Knowledge Manager Homepage</phrase>
+                        </textobject>
+                    </mediaobject>
+                </figure>
+            </para>
+        </simplesect>
+    </section>
+    <section>
+        <title>Edit Profile</title>
+        <para>Select the <emphasis>Profile</emphasis> menu option to change:<itemizedlist>
+                <listitem>
+                    <para>Display name</para>
+                </listitem>
+                <listitem>
+                    <para>User name</para>
+                </listitem>
+                <listitem>
+                    <para>Email address</para>
+                </listitem>
+                <listitem>
+                    <para>Change password</para>
+                </listitem>
+            </itemizedlist>To save changes select the <emphasis>Save</emphasis> button. Selecting
+            the Cancel button will discard changes made. <figure>
+                <title>User Profile</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata align="left" scalefit="1" width="50%" contentdepth="50%"
+                            fileref="images/Edit-profile.png"/>
+                    </imageobject>
+                    <textobject>
+                        <phrase>Edit Profile</phrase>
+                    </textobject>
+                </mediaobject>
+            </figure></para>
+    </section>
+</chapter>
+
+<?oxy_options track_changes="on"?>

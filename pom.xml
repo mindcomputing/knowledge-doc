@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.mindcomputing.knowledge.doc</groupId>
+	<artifactId>knowledge-doc</artifactId>
+	<version>1.1-SNAPSHOT</version>
+
+	<name>Knowledge documentation</name>
+	<description>Knowledge documentation</description>
+	<packaging>pom</packaging>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>A business-friendly OSS license</comments>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://github.com/mindcomputing/knowledge-doc</url>
+		<connection>scm:git:https://github.com/mindcomputing/knowledge-doc.git</connection>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.1.2</version>
+				<executions>
+					<execution>
+						<id>unpack</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>net.sf.docbook</groupId>
+									<artifactId>docbook-xsl</artifactId>
+									<version>1.79.1</version>
+									<classifier>ns-resources</classifier>
+									<type>zip</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${project.build.directory}/docbook-xsl-ns</outputDirectory>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.agilejava.docbkx</groupId>
+				<artifactId>docbkx-maven-plugin</artifactId>
+				<version>2.0.17</version>
+				<dependencies>
+					<dependency>
+						<groupId>net.sf.offo</groupId>
+						<artifactId>fop-hyph</artifactId>
+						<version>2.0</version>
+						<scope>compile</scope>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<generatedSourceDirectory>${project.build.directory}/docbkx/generated</generatedSourceDirectory>
+					<xincludeSupported>true</xincludeSupported>
+					<paperType>USletter</paperType>
+					<fop1Extensions>1</fop1Extensions>
+					<foCustomization>
+						${project.basedir}/src/main/resources/docbook.xsl
+					</foCustomization>
+				</configuration>
+				<executions>
+					<execution>
+						<id>generate-docbook</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>generate-pdf</goal>
+							<goal>generate-html</goal>
+						</goals>
+						<configuration>
+							<includes>knowledge-user-guide-root.xml</includes>
+							<draftMode>no</draftMode>
+							<externalFOPConfiguration>
+								${project.basedir}/src/main/resources/fop.xconf
+							</externalFOPConfiguration>
+							<targetDirectory>${project.build.directory}/docbook</targetDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/docbook/images</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/src/docbkx/images</directory>
+									<filtering>false</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.3.0</version>
+				<executions>
+					<execution>
+						<id>attach-docbook</id>
+						<configuration>
+							<descriptors>
+								<descriptor>src/main/assembly/html.xml</descriptor>
+								<descriptor>src/main/assembly/pdf.xml</descriptor>
+							</descriptors>
+						</configuration>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<phase>package</phase>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
